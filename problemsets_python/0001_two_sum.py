@@ -16,6 +16,7 @@ def two_sums1(nums, target):
                 return [i, j]
 
 # Method2
+# Time complexity is O(n) and space complexity is O(n)
 def two_sum(nums, target):
     h_map = {}
     for i, n in enumerate(nums):
