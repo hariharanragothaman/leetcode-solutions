@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
 
 vector<int> twoSum(vector<int>& nums, int target)
@@ -25,10 +26,17 @@ vector<int> twoSum(vector<int>& nums, int target)
         }
     }
 
+    return {};
 }
 
 int main()
 {
+    /*
+     Since we are doing hashmap:
+     Time-Complexity is: O(n) worst case for hashmap
+     Space-Complexity is: O(n)
+
+    */
     vector<int> nums = {2, 7, 11, 15};
     vector<int> result;
     
