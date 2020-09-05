@@ -25,7 +25,7 @@ Solution approach:
 3. Return the sorted output
 """
 
-from collection import deque
+from collections import deque
 
 class Solution:
     def get_all_elements(self, root1: TreeNode, root2: TreeNode) -> list[int]:
