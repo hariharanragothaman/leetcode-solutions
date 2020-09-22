@@ -34,13 +34,14 @@ class Solution:
             hashmap[(i, i)] = mat[i][i]
 
         for i in range(rows):
-            print((rows-1-i, i))
+            print((rows - 1 - i, i))
             hashmap[(rows - 1 - i, i)] = mat[rows - 1 - i][i]
 
         return sum(hashmap.values())
 
+
 if __name__ == "__main__":
     sol = Solution()
-    mat = [[1,2,3],[4,5,6],[7,8,9]]
+    mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     output = sol.diagonalSum(mat)
     print("The diagonal sum is:", output)
