@@ -18,6 +18,7 @@ The core logic in this is:
 
 
 def longest_palindromic_substring(string):
+    result = []
     for i in range(len(string)):
         for j in range(len(string), i, -1):
             if len(result) > j-i: # This means we have found it.
