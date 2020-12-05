@@ -24,5 +24,5 @@ def two_sum(nums, target):
 
     for i in range(len(nums)):
         diff = target - nums[i]
-        if diff in h_map and h_map[diff] !=i:
+        if diff in h_map and h_map[diff] != i:
             return [i, h_map[diff]]
