@@ -1,2 +1,1 @@
-# pyrevise.aio
-Frequently asked Interview Questions - Useful for revising
+#### Frequently asked Interview Questions - Useful for revising
