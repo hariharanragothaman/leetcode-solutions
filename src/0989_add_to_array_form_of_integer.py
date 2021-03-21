@@ -30,7 +30,6 @@ Output: [1,0,0,0,0,0,0,0,0,0,0]
 Explanation: 9999999999 + 1 = 10000000000
 
 """
-
 class Solution:
     def addToArrayForm(self, A: List[int], K: int) -> List[int]:
         value = str(int(''.join(str(c) for c in A)) + K)
