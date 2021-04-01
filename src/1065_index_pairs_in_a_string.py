@@ -93,6 +93,8 @@ class Solution:
         for left in range(len(text)):
             for right in range(left, len(text)):
                 substr = text[left:right + 1]
+                if not t.starts_with(substr):
+                    break
                 if t.__contains__(substr) and substr in words:
                     res.append((left, right))
 
