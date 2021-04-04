@@ -52,7 +52,7 @@ def number_of_islands(grid):
                 x, y = nei
                 if grid[x][y] == '1':
                     grid[x][y] = '0'
-                    q.append(x, y)
+                    q.append((x, y))
 
     # Core logic - find a 1 and marks it's neighbours as zero
     for r, rows in enumerate(grid):
