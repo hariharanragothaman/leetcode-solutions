@@ -24,8 +24,8 @@ class Solution:
         num = [int(c) for c in num_str]
         arr = sorted((int(c) for c in num_str), reverse=True)
 
-        arr = ''.join(str(c) for c in arr)
-        num = ''.join(str(c) for c in num)
+        arr = "".join(str(c) for c in arr)
+        num = "".join(str(c) for c in num)
 
         cnt = 0
         for c in zip(arr, num):
@@ -36,7 +36,12 @@ class Solution:
         if cnt == len(num):
             return num
 
-        right_index = num.rindex(c[0], cnt +1)
-        num = num[:cnt] + num[right_index] + num[cnt+1:right_index] + num[cnt] + num[right_index +1:]
+        right_index = num.rindex(c[0], cnt + 1)
+        num = (
+            num[:cnt]
+            + num[right_index]
+            + num[cnt + 1 : right_index]
+            + num[cnt]
+            + num[right_index + 1 :]
+        )
         return num
-    
