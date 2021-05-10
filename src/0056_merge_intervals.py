@@ -10,13 +10,26 @@ Output: [[1,5]]
 Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 """
 
-def merge_intervals(intervals):
-    intervals.sort()
-    result = []
+from typing import List
 
-    for i in range(len(intervals)):
-        if not result or intervals[i][0] > result[-1][1]:
-            result.append(intervals)
-        else:
-            result[-1][1] = max(intervals[i][1], result[-1][1])
-    return result
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        intervals = sorted(intervals)
+
+        merged = []
+        n = len(intervals)
+
+        for i in range(n):
+            cstart, cend = intervals[i]
+            if not merged or cstart > merged[-1][1]:
+                merged.append(intervals[i])
+            else:
+                merged[-1][1] = max(merged[-1][1], intervals[i][1])
+
+        return merged
+
+if __name__ == '__main__':
+    intervals = [[2,3],[4,5],[6,7],[8,9],[1,10]]
+    s = Solution()
+    res = s.merge(intervals)
+    print("The merged intervals are:", res)
