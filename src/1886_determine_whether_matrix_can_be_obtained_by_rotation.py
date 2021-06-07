@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def rotate(self, mat):
         mat[:] = zip(*mat[::-1])
