@@ -20,6 +20,7 @@ class Solution:
                         q.append(new_node)
         return False
 
+
 if __name__ == '__main__':
     s = Solution()
     result = s.wordBreak()

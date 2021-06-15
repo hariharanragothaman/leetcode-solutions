@@ -29,6 +29,7 @@ class Solution:
                     q.append((new_target,
                               current_ans + [candidates[i]],
                               i))
+        print(ans)
 
 
 if __name__ == '__main__':
