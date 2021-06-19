@@ -17,15 +17,14 @@ class Solution:
         x, y, dx, dy = 0, 0, 0, 1
         # smart usage of dx, dy to change directions. Fantastic!
         for c in s:
-            if s == 'R':
-                dx = dy
-                dy = -dx
-            if s == 'L':
-                dx = -dy
-                dy = dx
-            if s == 'G':
+            if c == 'R':
+                # remember this is python style in-place comparison
+                dx, dy = dy, -dx
+            if c == 'L':
+                dx, dy = -dy, dx
+            if c == 'G':
                 x += dx
-                y += dx
+                y += dy
 
         return (x, y) == (0,0) or (dx, dy) != (0, 1)
 
