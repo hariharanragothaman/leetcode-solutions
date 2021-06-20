@@ -14,6 +14,8 @@ class TimeMap:
         self.data_structure[key].append((timestamp, value))
 
     def get(self, key: str, timestamp: int) -> str:
+        """bisect_left approach - is somehow weirdly TLE'ing """
+        """
         if key in self.data_structure:
             _tmp = self.data_structure[key]
             times = [c[0] for c in _tmp]
@@ -28,6 +30,21 @@ class TimeMap:
                     return ""
         else:
             return ""
+        """
+        if key in self.data_structure:
+            arr = self.data_structure[key]
+
+            n = len(arr)
+            left, right = 0, n
+
+            while left < right:
+                mid = (left + right) >> 1
+                if arr[mid][0] <= timestamp:
+                    left = mid + 1
+                elif arr[mid][0] > timestamp:
+                    right = mid
+
+            return "" if right == 0 else arr[right - 1][1]
 
 
 if __name__ == "__main__":
