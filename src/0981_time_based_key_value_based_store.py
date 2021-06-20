@@ -3,16 +3,21 @@ from bisect import bisect_left
 
 
 class TimeMap:
+
     def __init__(self):
+        """
+        Initialize your data structure here.
+        """
         self.data_structure = defaultdict(list)
 
-    def set(self, key, value, timestamp) -> None:
+    def set(self, key: str, value: str, timestamp: int) -> None:
         self.data_structure[key].append((timestamp, value))
 
-    def get(self, key, timestamp) -> str:
+    def get(self, key: str, timestamp: int) -> str:
         if key in self.data_structure:
             _tmp = self.data_structure[key]
             times = [c[0] for c in _tmp]
+
             index = bisect_left(times, timestamp)
             if index != len(times) and times[index] == timestamp:
                 return _tmp[index][1]
