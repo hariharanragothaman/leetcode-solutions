@@ -13,18 +13,16 @@ class TimeMap:
         if key in self.data_structure:
             _tmp = self.data_structure[key]
             times = [c[0] for c in _tmp]
-            values = [c[1] for c in _tmp]
-
-            print("The times are:", times)
 
             # if the timestamp is in times:
+            # Potential place to optimze for overall-run time
             if timestamp in times:
                 idx = bisect_left(times, timestamp)
-                return values[idx]
+                return _tmp[idx][1]
             else:
                 idx = bisect_right(times, timestamp)
                 if idx - 1 >= 0:
-                    return values[idx-1]
+                    return _tmp[idx-1][1]
                 else:
                     return ""
         else:
