@@ -1,29 +1,29 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        open = ['(']
+        opened = ['(']
         closed = [')']
 
         s = [c for c in s]
         print(s)
 
         stack = []
-        to_remove = []
+        to_remove = set()
         for i in range(len(s)):
-            if s[i] in open:
+            if s[i] in opened:
                 stack.append((s[i],i))
             elif s[i] in closed:
                 print("The stack is:",stack)
-                if stack and stack[-1][0] in open:
+                if stack and stack[-1][0] in opened:
                     stack.pop()
-                elif stack and stack[-1][0] not in open:
+                elif stack and stack[-1][0] not in opened:
                     print("Entering here...")
-                    to_remove.append(i)
+                    to_remove.add(i)
                 else:
                     stack.append((s[i], i))
 
         if stack:
             for c, idx in stack:
-                to_remove.append(idx)
+                to_remove.add(idx)
         print(f"The to_remove array is:", to_remove)
 
         result = ''
