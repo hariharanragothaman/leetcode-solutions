@@ -23,6 +23,10 @@ Input:
 Output: 3
 
 """
+
+# Literally we are counting the number connected components in a graph using DFS routines
+# Instead of using visited, we are toggling 1 -> 0
+
 from collections import deque
 
 def number_of_islands(grid):
