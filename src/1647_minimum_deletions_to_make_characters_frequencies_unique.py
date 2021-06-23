@@ -24,6 +24,8 @@ Note that we only care about characters that are still in the string at the end 
 
 """
 
+from collections import Counter
+
 
 class Solution:
     def minDeletions(self, s: str) -> int:

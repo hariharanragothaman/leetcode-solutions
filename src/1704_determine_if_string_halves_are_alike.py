@@ -34,6 +34,8 @@ s.length is even.
 s consists of uppercase and lowercase letters.
 """
 
+from collections import Counter
+
 class Solution:
     def halvesAreAlike(self, s: str) -> bool:
         vowels = 'aeiouAEIOU'
