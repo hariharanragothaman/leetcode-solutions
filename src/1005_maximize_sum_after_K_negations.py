@@ -3,6 +3,8 @@ Given an array A of integers, we must modify the array in the following way: we 
 Return the largest possible sum of the array after modifying it in this way.
 
 """
+from typing import List
+
 
 class Solution:
     def largestSumAfterKNegations(self, A: List[int], K: int) -> int:

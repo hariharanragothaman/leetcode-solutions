@@ -24,6 +24,9 @@ n == gain.length
 -100 <= gain[i] <= 100
 """
 
+from typing import List
+
+
 def largestAltitude(gain: List[int]) -> int:
     arr = [0]
     for i in range(len(gain)):

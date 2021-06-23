@@ -59,7 +59,6 @@ as in there is atleast one character, that has not been mapped
 """
 
 
-
 def can_convert(s1, s2):
     # Given I/P both are same strings
     if s1 == s2:
@@ -67,6 +66,6 @@ def can_convert(s1, s2):
 
     hashmap = {}
     for i, j in zip(s1, s2):
-        if hashmap.setdefault(i, j) != j
+        if hashmap.setdefault(i, j) != j:
             return False
     return len(set(s2)) < 26

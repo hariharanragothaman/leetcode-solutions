@@ -21,6 +21,8 @@ Input: arr = [9,7,8,7,7,8,4,4,6,8,8,7,6,8,8,9,2,6,0,0,1,10,8,6,3,3,5,1,10,9,0,7,
 Output: 5.27778
 """
 
+from typing import List
+
 
 class Solution:
     def trimMean(self, arr: List[int]) -> float:
