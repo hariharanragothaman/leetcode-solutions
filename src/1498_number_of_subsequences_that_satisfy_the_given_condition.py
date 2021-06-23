@@ -38,6 +38,7 @@ The basic fundae here is:
    These are the core crux points
 """
 
+from typing import List
 
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:

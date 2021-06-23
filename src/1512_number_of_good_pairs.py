@@ -6,6 +6,8 @@ Return the number of good pairs.
 
 # Classic bruteforce
 
+from typing import List
+
 
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:

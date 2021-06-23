@@ -25,6 +25,8 @@ The length of words[i] will be in the range [1, 30].
 
 """
 
+from typing import List
+
 
 class Trie:
     def __init__(self, *words):
