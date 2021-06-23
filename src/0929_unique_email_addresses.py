@@ -22,6 +22,6 @@ class Solution:
         for e in emails:
             local, domain = e.split("@")
             local = local.split("+")[0]
-            local = "".join(c for c in local if c is not ".")
+            local = "".join(c for c in local if c != ".")
             hset.add(local + "@" + domain)
         return len(hset)
