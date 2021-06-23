@@ -74,7 +74,7 @@ class Solution:
         for w in words:
             check_flag = True
             for i in range(len(w)):
-                candidate = w[:i + 1]
+                candidate = w[: i + 1]
                 if not t.__contains__(candidate):
                     check_flag = False
                     break

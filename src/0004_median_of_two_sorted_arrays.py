@@ -15,12 +15,14 @@ nums2 = [3, 4]
 The median is (2 + 3)/2 = 2.5
 
 """
-def median_sorted_arrays(nums1, nums2):
-    values = sorted(nums1+nums2)
-    length = len(values)
-    index = length//2
 
-    if length %2 != 0:
+
+def median_sorted_arrays(nums1, nums2):
+    values = sorted(nums1 + nums2)
+    length = len(values)
+    index = length // 2
+
+    if length % 2 != 0:
         return values[index]
     else:
-        return (values[index]+ values[index-1]) / 2.0
+        return (values[index] + values[index - 1]) / 2.0

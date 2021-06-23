@@ -8,7 +8,9 @@ class Solution:
                 i += 1
                 j += 1
             else:
-                if abbr[j] == '0':  # to handle edge cases such as "01", which are invalid
+                if (
+                    abbr[j] == "0"
+                ):  # to handle edge cases such as "01", which are invalid
                     return False
                 temp = 0
                 while j < len(abbr) and abbr[j].isdigit():
@@ -19,7 +21,7 @@ class Solution:
         return j == len(abbr) and i == len(word)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     word = "hi"
     abbr = "1i"

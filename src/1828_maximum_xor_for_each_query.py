@@ -7,9 +7,9 @@ class Solution:
         result = []
 
         limit = 2 ** maximumBit
-        max_limit = '1' * (limit.bit_length())
+        max_limit = "1" * (limit.bit_length())
         print("max_limit is:", max_limit)
-        number_of_bits = len(max_limit) -1
+        number_of_bits = len(max_limit) - 1
 
         prefix_xor = [nums[0]]
         for i in range(1, len(nums)):
@@ -26,10 +26,10 @@ class Solution:
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
-    print(2**20)
-    nums = [0,1,2,2,5,7]
+    print(2 ** 20)
+    nums = [0, 1, 2, 2, 5, 7]
     print(reduce(lambda i, j: i ^ j, nums))
     maximumBit = 3
     s.getMaximumXor(nums, maximumBit)

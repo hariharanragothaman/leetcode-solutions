@@ -29,7 +29,7 @@ class Solution:
         return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
-    res = s.canAttendMeetings(intervals=[[0,30],[5,10],[15,20]])
+    res = s.canAttendMeetings(intervals=[[0, 30], [5, 10], [15, 20]])
     print("The result is:", res)

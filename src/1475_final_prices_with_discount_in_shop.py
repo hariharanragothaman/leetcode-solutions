@@ -31,15 +31,16 @@ Constraints:
 1 <= prices[i] <= 10^3
 """
 
+
 class Solution:
     def finalPrices(self, prices: List[int]) -> List[int]:
         op = []
         for i in range(len(prices)):
             fl = False
-            for j in range(i+1, len(prices)):
+            for j in range(i + 1, len(prices)):
                 if prices[j] <= prices[i]:
                     fl = True
-                    op.append(prices[i]-prices[j])
+                    op.append(prices[i] - prices[j])
                     break
             if not fl:
                 op.append(prices[i])

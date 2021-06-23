@@ -1,7 +1,7 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        opened = ['(']
-        closed = [')']
+        opened = ["("]
+        closed = [")"]
 
         s = [c for c in s]
         print(s)
@@ -10,9 +10,9 @@ class Solution:
         to_remove = set()
         for i in range(len(s)):
             if s[i] in opened:
-                stack.append((s[i],i))
+                stack.append((s[i], i))
             elif s[i] in closed:
-                print("The stack is:",stack)
+                print("The stack is:", stack)
                 if stack and stack[-1][0] in opened:
                     stack.pop()
                 elif stack and stack[-1][0] not in opened:
@@ -26,7 +26,7 @@ class Solution:
                 to_remove.add(idx)
         print(f"The to_remove array is:", to_remove)
 
-        result = ''
+        result = ""
         for i, val in enumerate(s):
             if i not in to_remove:
                 result += val
@@ -34,7 +34,7 @@ class Solution:
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     obj = Solution()
     s = input()
     result = obj.minRemoveToMakeValid(s)

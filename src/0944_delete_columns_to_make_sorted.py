@@ -59,6 +59,7 @@ Constraints:
 
 from typing import List
 
+
 def get_columns(mat):
     return zip(*mat)
 

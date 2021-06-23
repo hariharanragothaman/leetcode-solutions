@@ -48,4 +48,4 @@ class Solution:
                 stack.append((s[i], char_count))
 
         res = [c[0] for c in stack]
-        return ''.join(res)
+        return "".join(res)

@@ -13,15 +13,16 @@ class Solution:
         :return:
         """
 
-        if k == 1: return [max(nums)]
+        if k == 1:
+            return [max(nums)]
 
         hash_map = {}
         for i, n in enumerate(nums):
             hash_map[n] = i
 
-        candidates = nums[:len(nums) - k + 1]
+        candidates = nums[: len(nums) - k + 1]
         print(candidates)
         mx = max(candidates)
         mx_idx = hash_map[mx]
-        op = nums[mx_idx:mx_idx + k]
+        op = nums[mx_idx : mx_idx + k]
         return op

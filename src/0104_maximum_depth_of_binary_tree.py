@@ -9,7 +9,7 @@ class TreeNode:
 
 
 class Solution:
-    def maxDepth(self, root:TreeNode) -> int:
+    def maxDepth(self, root: TreeNode) -> int:
         # Applying level order traversal template
         if not root:
             return 0

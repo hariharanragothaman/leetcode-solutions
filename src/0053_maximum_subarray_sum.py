@@ -9,6 +9,7 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 
 # SOLUTION1: Sliding Window
 
+
 def maximum_sub_array(nums):
     left, right = 0, 0
     max_sum = nums[left]

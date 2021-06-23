@@ -42,18 +42,17 @@ Constraints:
 """
 
 
-
 class Solution:
     def longestNiceSubstring(self, s: str) -> str:
         max_length = 0
         result = ""
         for i in range(len(s)):
             for j in range(i, len(s)):
-                substr = s[i:j+1]
-                upper = ''.join(c for c in substr if c.isupper())
-                lower = ''.join(c for c in substr if c.islower())
+                substr = s[i : j + 1]
+                upper = "".join(c for c in substr if c.isupper())
+                lower = "".join(c for c in substr if c.islower())
                 upper = upper.lower()
-                if set(upper) ==set(lower) and (len(substr) > max_length):
+                if set(upper) == set(lower) and (len(substr) > max_length):
                     max_length = max(max_length, len(substr))
                     result = substr
         return result

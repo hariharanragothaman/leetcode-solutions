@@ -6,7 +6,6 @@ class TreeNode:
         self.right = right
 
 
-
 class Solution:
     def __init__(self, array):
         self.arr = array
@@ -39,7 +38,6 @@ class Solution:
             i += 1
 
         return self.root
-
 
     def countUnivalSubtrees(self, root: TreeNode) -> int:
         # subroutine to get post-order traversal
@@ -86,9 +84,8 @@ class Solution:
         return count
 
 
-
-if __name__ == '__main__':
-    arr = [5,1,5,5,5,None,5]
+if __name__ == "__main__":
+    arr = [5, 1, 5, 5, 5, None, 5]
     s = Solution(arr)
     node_map = {}
     for i in range(len(arr)):

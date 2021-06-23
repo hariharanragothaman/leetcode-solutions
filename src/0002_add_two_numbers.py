@@ -4,10 +4,12 @@ The digits are stored in reverse order, and each of their nodes contains a singl
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 """
 
+
 class ListNode:
     def __init__(self):
         self.val = x
         self.next = None
+
 
 def add_two_numbers(a, b):
     l1 = a
@@ -31,7 +33,7 @@ def add_two_numbers(a, b):
 
         add = value1 + value2 + carry
         carry = add // 10
-        item  = add % 10
+        item = add % 10
 
         current.next = ListNode(item)
         current = current.next

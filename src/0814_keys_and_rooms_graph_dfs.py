@@ -36,6 +36,7 @@ Note:
 
 from collections import defaultdict, deque
 
+
 class Solution:
     def __init__(self):
         self.g = defaultdict(list)
@@ -49,7 +50,7 @@ class Solution:
 
         # Starting DFS recipe
         visited = {}
-        start = '0'
+        start = "0"
 
         for k in range(len(rooms)):
             visited[str(k)] = False

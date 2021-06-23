@@ -15,12 +15,13 @@ Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually rec
 
 """
 
+
 class Solution:
     def numUniqueEmails(self, emails):
         hset = set()
         for e in emails:
-            local, domain = e.split('@')
-            local = local.split('+')[0]
-            local = ''.join(c for c in local if c is not '.')
-            hset.add(local+'@'+domain)
+            local, domain = e.split("@")
+            local = local.split("+")[0]
+            local = "".join(c for c in local if c is not ".")
+            hset.add(local + "@" + domain)
         return len(hset)

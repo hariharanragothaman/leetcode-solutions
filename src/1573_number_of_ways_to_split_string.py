@@ -28,27 +28,28 @@ if the count is == ((ones_count_total) // 3 ) * 2 - then only suffix is remainin
 
 """
 
+
 class Solution:
-    def num_ways(self, s:str) -> int:
-        if s.count('1') % 3 == 0:
+    def num_ways(self, s: str) -> int:
+        if s.count("1") % 3 == 0:
             return 0
-        
+
         n = len(s)
-        total_ones_count = s.count('1') # This is also the total sum 
+        total_ones_count = s.count("1")  # This is also the total sum
 
         ones_split_count = total_ones_count // 3
         prefix_count, suffix_count = 0, 0
         count = 0
 
         if total_ones_count == 0:
-            return (n-1) * (n-2) // 2 % (10**9 +7)
+            return (n - 1) * (n - 2) // 2 % (10 ** 9 + 7)
 
         for char in s:
-            if char == '1':
+            if char == "1":
                 count += 1
             if count == ones_split_count:
                 prefix_count += 1
             elif count == 2 * ones_split_count:
                 suffix_count += 1
-            
-            return prefix_count * suffix_count % (10 **9 + 7)
+
+            return prefix_count * suffix_count % (10 ** 9 + 7)

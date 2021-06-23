@@ -12,6 +12,7 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
 from typing import List
 
+
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         intervals = sorted(intervals)
@@ -28,8 +29,9 @@ class Solution:
 
         return merged
 
-if __name__ == '__main__':
-    intervals = [[2,3],[4,5],[6,7],[8,9],[1,10]]
+
+if __name__ == "__main__":
+    intervals = [[2, 3], [4, 5], [6, 7], [8, 9], [1, 10]]
     s = Solution()
     res = s.merge(intervals)
     print("The merged intervals are:", res)

@@ -11,8 +11,8 @@ def is_palindrome(number):
 def is_palindrome_without_typecast(number):
     # This condition is defined by the problem statement
     """
-     # When num < 0, num is not a palindrome
-     # Also if last digit is zero and number is not zero, it's not - since num can only be zero
+    # When num < 0, num is not a palindrome
+    # Also if last digit is zero and number is not zero, it's not - since num can only be zero
     """
     if number < 0 or (number % 10 == 0 and number != 0):
         return False
@@ -28,7 +28,7 @@ def is_palindrome_without_typecast(number):
     return number == rev_number or (number == rev_number // 10)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     value = 121
     op = is_palindrome(value)
     print(op)

@@ -5,7 +5,7 @@ def longest_consecutive_sequence(nums):
     nums = sorted(set(nums))
 
     for i in range(1, len(nums)):
-        if (nums[i] - nums[i-1]) == 1:
+        if (nums[i] - nums[i - 1]) == 1:
             window_length += 1
             max_length = max(window_length, max_length)
         else:

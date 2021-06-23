@@ -46,16 +46,17 @@ You can rotate the array by x = 5 positions to begin on the element of value 2: 
 
 # --> This string logic won't work here, since - we have numbers like 10 and duplicates also. Haha
 def check_initial_thoughts(nums):
-    nums = ''.join(str(c) for c in nums)
-    total = ''.join(str(c) for c in sorted(nums))
-    temp = total*2
+    nums = "".join(str(c) for c in nums)
+    total = "".join(str(c) for c in sorted(nums))
+    temp = total * 2
     if nums in temp:
         return True
     return False
 
+
 def check(nums):
     print("Some debugging here")
-    print(nums[1:]+nums[:1])
+    print(nums[1:] + nums[:1])
     # This is to cyclically compare the neigbhours.
     cnt = 0
     for a, b in zip(nums, nums[1:] + nums[:1]):
@@ -66,7 +67,7 @@ def check(nums):
     return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     nums = [2, 1, 3, 4]
     result = check(nums)
     print(result)

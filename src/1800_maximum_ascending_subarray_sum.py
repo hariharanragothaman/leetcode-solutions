@@ -50,7 +50,7 @@ class Solution:
         i = 0
 
         while i < len(nums):
-            if nums[i] <= nums[i-1]:
+            if nums[i] <= nums[i - 1]:
                 total = 0
             total += nums[i]
             max_total = max(total, max_total)

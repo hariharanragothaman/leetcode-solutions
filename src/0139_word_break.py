@@ -1,6 +1,7 @@
 from typing import *
 from collections import deque
 
+
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         # Apply classic DFS
@@ -11,7 +12,7 @@ class Solution:
             node = q.popleft()
             for word in wordDict:
                 if node.startswith(word):
-                    new_node = node[len(word):]
+                    new_node = node[len(word) :]
                     if new_node == "":
                         return True
 
@@ -21,7 +22,7 @@ class Solution:
         return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     result = s.wordBreak()
     print(f"The result is: {result}")

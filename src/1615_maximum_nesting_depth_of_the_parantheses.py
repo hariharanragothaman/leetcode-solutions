@@ -53,9 +53,11 @@ Constraints:
 """
 The basic idea here is to get the maximum size of the stack after parsing the string
 """
+
+
 class Solution:
     def maxDepth(self, s: str) -> int:
-        s = ''.join(c for c in s if c in '()')
+        s = "".join(c for c in s if c in "()")
         if not s:
             return 0
         s = [c for c in s]
@@ -64,7 +66,7 @@ class Solution:
         mx = 0
 
         for c in s:
-            if c in '(':
+            if c in "(":
                 stack.append(c)
                 mx = max(mx, len(stack))
             else:

@@ -36,6 +36,6 @@ from typing import List
 
 class Solution:
     def addToArrayForm(self, A: List[int], K: int) -> List[int]:
-        value = str(int(''.join(str(c) for c in A)) + K)
+        value = str(int("".join(str(c) for c in A)) + K)
         result = [int(c) for c in value]
         return result

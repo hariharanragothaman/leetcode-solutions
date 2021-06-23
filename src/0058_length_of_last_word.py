@@ -5,6 +5,7 @@ Note: A word is defined as a maximal substring consisting of non-space character
 
 """
 
+
 def length_of_last_word(s):
     words = s.split()
     if words:

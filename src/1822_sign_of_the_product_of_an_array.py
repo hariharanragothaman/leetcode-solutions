@@ -41,8 +41,8 @@ Constraints:
 """
 
 
-
 from typing import List
+
 
 class Solution:
     def arraySign(self, nums: List[int]) -> int:

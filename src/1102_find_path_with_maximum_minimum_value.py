@@ -12,11 +12,7 @@ class Solution:
         R, C = len(M), len(M[0])
 
         def neighbours(r, c, R, C):
-            for rows, cols in ((r - 1, c),
-                               (r, c - 1),
-                               (r + 1, c),
-                               (r, c + 1)
-                               ):
+            for rows, cols in ((r - 1, c), (r, c - 1), (r + 1, c), (r, c + 1)):
                 if 0 <= rows < R and 0 <= cols < C:
                     yield rows, cols
 
@@ -45,7 +41,9 @@ class Solution:
 
             visited[i][j] = 1
 
-            not_visited_nei = [(nr, nc) for nr, nc in neighbours(i, j, R, C) if not visited[nr][nc]]
+            not_visited_nei = [
+                (nr, nc) for nr, nc in neighbours(i, j, R, C) if not visited[nr][nc]
+            ]
 
             # I think the TLE is because of this
             for nr, nc in not_visited_nei:

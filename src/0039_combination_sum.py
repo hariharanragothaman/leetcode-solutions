@@ -12,9 +12,7 @@ The most important things to remember here is that:
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         q = deque()
-        q.append((target,
-                  [],
-                  0))
+        q.append((target, [], 0))
         ans = []
 
         while q:
@@ -26,12 +24,10 @@ class Solution:
                 if new_target == 0:
                     ans.append(current_ans + [candidates[i]])
                 elif new_target > 0:
-                    q.append((new_target,
-                              current_ans + [candidates[i]],
-                              i))
+                    q.append((new_target, current_ans + [candidates[i]], i))
         print(ans)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     s.combinationSum(candidates=[2, 3, 6, 7], target=7)

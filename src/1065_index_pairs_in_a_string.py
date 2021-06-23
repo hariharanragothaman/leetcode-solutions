@@ -29,6 +29,7 @@ Note:
 
 """
 
+
 class Trie:
     def __init__(self, *words):
         self.root = dict()
@@ -92,7 +93,7 @@ class Solution:
         t = Trie(*words)
         for left in range(len(text)):
             for right in range(left, len(text)):
-                substr = text[left:right + 1]
+                substr = text[left : right + 1]
                 if not t.starts_with(substr):
                     break
                 if t.__contains__(substr) and substr in words:

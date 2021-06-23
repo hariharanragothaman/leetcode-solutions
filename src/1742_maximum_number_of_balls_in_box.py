@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def countBalls(self, lowLimit: int, highLimit: int) -> int:
         g = defaultdict(int)

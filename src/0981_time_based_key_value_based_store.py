@@ -3,7 +3,6 @@ from bisect import bisect_left
 
 
 class TimeMap:
-
     def __init__(self):
         """
         Initialize your data structure here.
@@ -14,7 +13,7 @@ class TimeMap:
         self.data_structure[key].append((timestamp, value))
 
     def get(self, key: str, timestamp: int) -> str:
-        """bisect_left approach - is somehow weirdly TLE'ing """
+        """bisect_left approach - is somehow weirdly TLE'ing"""
         """
         if key in self.data_structure:
             _tmp = self.data_structure[key]

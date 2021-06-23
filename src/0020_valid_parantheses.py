@@ -8,8 +8,9 @@ Note that an empty string is also considered valid.
 
 """
 
+
 def check_valid_parantheses(string):
-    opened = ["(", "{", '[']
+    opened = ["(", "{", "["]
     closed = [")", "}", "]"]
 
     stack = []

@@ -27,7 +27,7 @@ class Trie:
             if letter not in current_dict:
                 return False
             current_dict = current_dict[letter]
-        return '_end_' in current_dict
+        return "_end_" in current_dict
 
     def __delitem__(self, word):
         current_dict = self.root
@@ -55,10 +55,7 @@ class Solution:
         print(trie_obj.root)
 
 
-
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     board = [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]]
     word = "ABCCED"
     s = Solution()

@@ -1,6 +1,7 @@
 from collections import defaultdict
 from typing import List
 
+
 class Solution:
     def allPathsSourceTarget(self, edges: List[List[int]]) -> List[List[int]]:
         all_paths = []

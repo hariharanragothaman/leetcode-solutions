@@ -25,10 +25,10 @@ Constraints:
 """
 
 
-
 class Solution:
     def checkOnesSegment(self, s: str) -> bool:
-        res = s.split('0')
+        res = s.split("0")
         res = [c for c in res if c]
-        if len(res) == 1: return True
+        if len(res) == 1:
+            return True
         return False

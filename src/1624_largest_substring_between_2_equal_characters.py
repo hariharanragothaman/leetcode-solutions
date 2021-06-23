@@ -1,5 +1,6 @@
 from collections import Counter, defaultdict
 
+
 class Solution:
     def maxLengthBetweenEqualCharacters(self, s: str) -> int:
         ctr = Counter(s)

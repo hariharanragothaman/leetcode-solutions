@@ -33,7 +33,7 @@ from collections import Counter
 
 class Solution:
     def checkIfPangram(self, sentence: str) -> bool:
-        alpha = [chr(c) for c in range(ord('a'), ord('z') + 1)]
+        alpha = [chr(c) for c in range(ord("a"), ord("z") + 1)]
         print(alpha)
 
         ctr = Counter(sentence)

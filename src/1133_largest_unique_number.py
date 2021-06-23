@@ -32,12 +32,15 @@ Note:
 from collections import Counter
 from typing import List
 
+
 class Solution:
     def largestUniqueNumber(self, A: List[int]) -> int:
         ctr = Counter(A)
-        ctr = {k:v for k, v in ctr.items() if v == 1}
+        ctr = {k: v for k, v in ctr.items() if v == 1}
         if ctr:
-            ctr = {k:v for k, v in sorted(ctr.items(), key=lambda x:x[0], reverse=True)}
+            ctr = {
+                k: v for k, v in sorted(ctr.items(), key=lambda x: x[0], reverse=True)
+            }
             return list(ctr.keys())[0]
         else:
             return -1

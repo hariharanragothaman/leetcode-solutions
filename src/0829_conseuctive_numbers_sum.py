@@ -15,7 +15,8 @@ class Solution:
                 csum -= window[left]
                 left += 1
 
-            if csum == N: count += 1
+            if csum == N:
+                count += 1
             right += 1
 
         return count + 1

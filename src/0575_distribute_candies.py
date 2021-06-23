@@ -40,6 +40,7 @@ Constraints:
 """
 
 from collections import Counter
+
 # Python Straightforward solution
 class Solution:
     def distributeCandies(self, candies):

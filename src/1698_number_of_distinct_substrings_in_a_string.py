@@ -13,7 +13,9 @@ class Solution:
         # Basically doing hash-values in prefix sum
         hash_values = [0] * (n + 1)
         for i in range(n):
-            hash_values[i + 1] = (hash_values[i] + (ord(s[i]) - ord('a') + 1) * power_mod[i]) % m
+            hash_values[i + 1] = (
+                hash_values[i] + (ord(s[i]) - ord("a") + 1) * power_mod[i]
+            ) % m
         print("The hash-values are:", hash_values)
 
         # Actual solution starts here
@@ -25,7 +27,7 @@ class Solution:
             result_set = set()
 
             for i in range(0, n - length + 1):
-                string = s[i:i + length]
+                string = s[i : i + length]
                 # print("The value of length ",length, i)
                 # print("The string is:", string)
                 current_hash = (hash_values[i + length] + m - hash_values[i]) % m

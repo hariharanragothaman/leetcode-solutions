@@ -35,7 +35,6 @@ Constraints:
 """
 
 
-
 class Solution:
     def maxRepeating(self, sequence: str, word: str) -> int:
         for i in range(1, 1000):

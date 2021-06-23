@@ -17,19 +17,19 @@ class Solution:
         x, y, dx, dy = 0, 0, 0, 1
         # smart usage of dx, dy to change directions. Fantastic!
         for c in s:
-            if c == 'R':
+            if c == "R":
                 # remember this is python style in-place comparison
                 dx, dy = dy, -dx
-            if c == 'L':
+            if c == "L":
                 dx, dy = -dy, dx
-            if c == 'G':
+            if c == "G":
                 x += dx
                 y += dy
 
-        return (x, y) == (0,0) or (dx, dy) != (0, 1)
+        return (x, y) == (0, 0) or (dx, dy) != (0, 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     instructions = "GGLLGG"
     instructions = input()
     s = Solution()

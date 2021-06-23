@@ -41,6 +41,7 @@ Constraints:
 
 from typing import List
 
+
 class Solution:
     def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) -> int:
         boxTypes = sorted(boxTypes, key=lambda x: x[1], reverse=True)

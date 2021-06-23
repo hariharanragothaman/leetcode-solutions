@@ -38,9 +38,9 @@ Constraints:
 class Solution:
     def squareIsWhite(self, c: str) -> bool:
         # black = 0, white = 1
-        s1 = 'aceg'
-        s2 = 'bdfh'
-        hmap = {s1: '01010101', s2: '10101010'}
+        s1 = "aceg"
+        s2 = "bdfh"
+        hmap = {s1: "01010101", s2: "10101010"}
 
         c = [k for k in c]
         char, digit = c
@@ -52,7 +52,7 @@ class Solution:
 
         val = string[int(digit) - 1]
 
-        if val == '0':
+        if val == "0":
             return False
         else:
             return True

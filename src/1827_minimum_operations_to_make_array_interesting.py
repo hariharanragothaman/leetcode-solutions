@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         if len(nums) == 1:
@@ -8,8 +9,8 @@ class Solution:
         cnt = 0
         for i in range(1, len(nums)):
             diff = 0
-            if nums[i] <= nums[i-1]:
-                diff = nums[i-1] - nums[i]
+            if nums[i] <= nums[i - 1]:
+                diff = nums[i - 1] - nums[i]
                 cnt += diff + 1
                 nums[i] = nums[i] + diff + 1
                 print(*nums)
@@ -21,7 +22,7 @@ class Solution:
         return cnt
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     nums = [1, 1, 1]
     s.minOperations(nums)

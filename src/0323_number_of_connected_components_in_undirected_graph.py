@@ -1,6 +1,7 @@
 from collections import defaultdict
 from typing import List
 
+
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
         graph = defaultdict(list)
@@ -27,8 +28,9 @@ class Solution:
 
         return connected_components
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     s = Solution()
     n = 5
-    edges = [[0,1],[1,2],[3,4]]
+    edges = [[0, 1], [1, 2], [3, 4]]
     s.countComponents(n, edges)

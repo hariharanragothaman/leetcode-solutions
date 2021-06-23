@@ -19,10 +19,11 @@ class Solution:
         else:
             return bisect_left(nums, target)
 
-    def searchInsert_withoutBisect(self, nums, target:int) -> int:
+    def searchInsert_withoutBisect(self, nums, target: int) -> int:
         pass
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     s = Solution()
     arr = [1, 3, 5, 6]
     target = 2

@@ -10,6 +10,7 @@ Output: [-10,0,0,1,2,5,7,10]
 
 """
 
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -27,6 +28,7 @@ Solution approach:
 
 from collections import deque
 
+
 class Solution:
     def get_all_elements(self, root1: TreeNode, root2: TreeNode) -> list[int]:
         output = []
@@ -40,10 +42,10 @@ class Solution:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-        
+
         if root1:
             dfs(root1)
         if root2:
             dfs(root2)
-        
+
         return sorted(output)

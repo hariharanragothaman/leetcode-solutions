@@ -14,6 +14,7 @@ Solution thoughts:
 
 from collections import Counter
 
+
 def longest_harmonious_sequence(nums):
     ctr = Counter(nums)
     keys = set(ctr.keys())
@@ -23,7 +24,7 @@ def longest_harmonious_sequence(nums):
 
     max_length = 0
     for k in keys:
-        if 1+k in ctr:
-            max_length = max(max_length, ctr.get(k) + ctr.get(1+k))
+        if 1 + k in ctr:
+            max_length = max(max_length, ctr.get(k) + ctr.get(1 + k))
 
     return max_length

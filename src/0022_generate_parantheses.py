@@ -11,6 +11,8 @@ Input: n = 1
 Output: ["()"]
 
 """
+
+
 class Solution:
     def generateParenthesis(self, n):
         res = []
@@ -21,12 +23,11 @@ class Solution:
                 continue
             if l == n and r == n:
                 res.append(x)
-            s.append((x+"(", l+1, r))
-            s.append((x+")", l, r+1))
+            s.append((x + "(", l + 1, r))
+            s.append((x + ")", l, r + 1))
         return res
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     s.generateParanthesis(5)

@@ -19,6 +19,7 @@ When the start time is greater than the end-time, then, it means, the previous m
 
 from typing import List
 
+
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         rooms = 0
@@ -38,8 +39,9 @@ class Solution:
                 e += 1
         return rooms
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     s = Solution()
-    arr = [[0,30],[5,10],[15,20]]
+    arr = [[0, 30], [5, 10], [15, 20]]
     res = s.minMeetingRooms(arr)
     print("The minimum rooms required is:", res)

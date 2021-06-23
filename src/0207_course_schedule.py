@@ -9,11 +9,13 @@ Return true if you can finish all courses. Otherwise, return false.
 
 from collections import defaultdict
 
+
 class Solution:
     def canFinish(self, numCourses, prerequisites):
         # So this a directed graph
         g = {}
-        for i in range(numCourses): g[i] = []
+        for i in range(numCourses):
+            g[i] = []
 
         for u, v in prerequisites:
             g[v].append(u)
@@ -36,7 +38,6 @@ class Solution:
             if in_degree[i] == 0:
                 q.append(i)
 
-
         nr = 0
 
         while q:
@@ -53,7 +54,7 @@ class Solution:
         return nr == numCourses
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     courses = 2
     prerequisites = [[1, 0]]

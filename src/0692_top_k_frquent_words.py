@@ -18,12 +18,15 @@ If two words have the same frequency, then the word with the lower alphabetical 
 
 """
 from collections import Counter
+
+
 def top_K_frequent_words(words, k):
     hash_map = Counter(words)
     # Here -ve sign signifies that you want to order values in reverse - 1st priority
-           # then the key - which is second priority
-    result = sorted(hash_map, key=lambda x:(-hash_map[x], x))
+    # then the key - which is second priority
+    result = sorted(hash_map, key=lambda x: (-hash_map[x], x))
     return result[:k]
+
 
 words = ["i", "love", "coding", "i", "love", "hello"]
 result = top_K_frequent_words(words, 3)

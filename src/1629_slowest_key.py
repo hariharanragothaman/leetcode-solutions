@@ -10,6 +10,7 @@ The longest of these was the keypress for 'b' and the second keypress for 'c', b
 'c' is lexicographically larger than 'b', so the answer is 'c'.
 """
 
+
 class Solution:
     def slowestKey(self, releaseTimes: List[int], keysPressed: str) -> str:
         keymap = defaultdict(int)
@@ -19,7 +20,9 @@ class Solution:
             else:
                 keymap[c] = max(keymap[c], (releaseTimes[i] - releaseTimes[i - 1]))
 
-        keymap = {k: v for k, v in sorted(keymap.items(), key=lambda x: (-keymap[x], x))}
+        keymap = {
+            k: v for k, v in sorted(keymap.items(), key=lambda x: (-keymap[x], x))
+        }
 
         max_time = max(keymap.values())
         res = []

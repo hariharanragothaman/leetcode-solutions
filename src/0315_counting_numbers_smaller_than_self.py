@@ -43,6 +43,7 @@ Constraints:
 from typing import List
 import bisect
 
+
 def count_smaller(nums: List[int]) -> List[int]:
     sorted_arr, count_arr = [], []
     for num in nums[::-1]:
@@ -52,7 +53,7 @@ def count_smaller(nums: List[int]) -> List[int]:
     return count_arr[::-1]
 
 
-if __name__ == '__main__':
-   nums = [5, 2, 6, 1]
-   count = count_smaller(nums)
-   print(count)
+if __name__ == "__main__":
+    nums = [5, 2, 6, 1]
+    count = count_smaller(nums)
+    print(count)

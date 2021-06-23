@@ -11,9 +11,10 @@ return [0, 1].
 # Method1 - This is just the brute-force way of doing stuff.
 def two_sums1(nums, target):
     for i in range(len(nums)):
-        for j in range(i+1, len(nums)):
+        for j in range(i + 1, len(nums)):
             if nums[i] + nums[j] == target:
                 return [i, j]
+
 
 # Method2
 # Time complexity is O(n) and space complexity is O(n)

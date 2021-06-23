@@ -28,9 +28,12 @@ Constraints:
 1 <= nums.length <= 100
 1 <= nums[i] <= 100
 """
+
+
 class Solution:
     def sumOfUnique(self, nums: List[int]) -> int:
         from collections import Counter
+
         ctr = Counter(nums)
         cnt = 0
         for k, v in ctr.items():

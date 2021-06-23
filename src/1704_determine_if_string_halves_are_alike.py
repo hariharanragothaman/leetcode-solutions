@@ -36,11 +36,12 @@ s consists of uppercase and lowercase letters.
 
 from collections import Counter
 
+
 class Solution:
     def halvesAreAlike(self, s: str) -> bool:
-        vowels = 'aeiouAEIOU'
+        vowels = "aeiouAEIOU"
         l = len(s)
-        p1, p2 = s[:l // 2], s[l // 2:]
+        p1, p2 = s[: l // 2], s[l // 2 :]
         ctr1, ctr2 = Counter(p1), Counter(p2)
 
         cnt1, cnt2 = 0, 0

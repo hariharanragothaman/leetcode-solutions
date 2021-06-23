@@ -47,4 +47,4 @@ Constraints:
 class Solution:
     def truncateSentence(self, s: str, k: int) -> str:
         t = s.split()
-        return ' '.join(c for c in t[:k])
+        return " ".join(c for c in t[:k])

@@ -32,7 +32,7 @@ All strings consist only of lowercase letters.
 
 
 def countMatches(self, items: List[List[str]], ruleKey: str, ruleValue: str) -> int:
-    hmap = {'type': 0, 'color': 1, 'name': 2}
+    hmap = {"type": 0, "color": 1, "name": 2}
     idx = hmap[ruleKey]
     result = [c for c in items if c[idx] == ruleValue]
     return len(result)

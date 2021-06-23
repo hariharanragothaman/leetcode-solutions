@@ -11,11 +11,12 @@ Write the code that will take a string and make this conversion given a number o
 string convert(string s, int numRows);
 """
 
+
 def convert(s, number_of_rows):
     if number_of_rows == 1 or number_of_rows > len(s):
         return s
-    
-    result = [''] * number_of_rows
+
+    result = [""] * number_of_rows
     index, step = 0, 1
 
     for char in s:
@@ -26,10 +27,11 @@ def convert(s, number_of_rows):
         elif index == number_of_rows - 1:
             step = -1
         index += step
-    
-    return ''.join(result)
 
-if __name__ == '__main__':
-    s = 'PAYPALISHIRING'
+    return "".join(result)
+
+
+if __name__ == "__main__":
+    s = "PAYPALISHIRING"
     op = convert(s, 3)
     print(op)

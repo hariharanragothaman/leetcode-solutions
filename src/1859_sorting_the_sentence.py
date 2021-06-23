@@ -7,4 +7,4 @@ class Solution:
             idx = int(c[-1]) - 1
             val = c[:-1]
             result[idx] = val
-        return ' '.join(result)
+        return " ".join(result)

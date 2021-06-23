@@ -40,4 +40,3 @@ class Solution:
             j -= 1
 
         return sum(q) / len(q)
-

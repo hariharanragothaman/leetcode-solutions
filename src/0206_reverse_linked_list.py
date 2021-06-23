@@ -2,6 +2,7 @@
 Given a linkedlist, reverse the linkedlist
 """
 
+
 def reverse_linked_list(head):
     prev = None
     current = head

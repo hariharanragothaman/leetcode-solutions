@@ -8,12 +8,12 @@ If there are many valid answers, return any of them. If it is impossible to fini
 """
 
 
-
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
         # So this a directed graph
         g = {}
-        for i in range(numCourses): g[i] = []
+        for i in range(numCourses):
+            g[i] = []
 
         for u, v in prerequisites:
             g[v].append(u)
@@ -35,7 +35,6 @@ class Solution:
         for i in range(numCourses):
             if in_degree[i] == 0:
                 q.append(i)
-
 
         nr = 0
 

@@ -21,7 +21,7 @@ class Solution:
         for i, c in enumerate(nu, 1):
             hmap[c] = i
 
-        rank_map = {1: 'Gold Medal', 2: "Silver Medal", 3: "Bronze Medal"}
+        rank_map = {1: "Gold Medal", 2: "Silver Medal", 3: "Bronze Medal"}
 
         for k, v in hmap.items():
             if v in rank_map:

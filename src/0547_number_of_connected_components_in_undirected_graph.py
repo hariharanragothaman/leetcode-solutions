@@ -9,6 +9,7 @@ You are given an n x n matrix isConnected where isConnected[i][j] = 1 if the ith
 Return the total number of provinces.
 """
 
+
 class Solution:
     def findCircleNum(self, mat: List[List[int]]) -> int:
 
@@ -43,6 +44,7 @@ class Solution:
 
         return count
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     s = Solution()
-    s.findCircleNum(mat=[[1,1,0],[1,1,0],[0,0,1]])
+    s.findCircleNum(mat=[[1, 1, 0], [1, 1, 0], [0, 0, 1]])

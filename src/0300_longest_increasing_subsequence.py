@@ -22,6 +22,7 @@ We can calculate the length of the increasing subsequence upto the ith index - f
 """
 import bisect
 
+
 class Solution:
     def length_of_LIS_binary_search(self, nums) -> int:
         temp = []
@@ -32,7 +33,7 @@ class Solution:
                 temp.append(number)
             else:
                 temp[index] = number
-        
+
         return len(temp)
 
     def length_of_LIS_dp(self, nums) -> int:
@@ -41,14 +42,15 @@ class Solution:
             for j in range(i):
                 if arr[i] >= arr[j] and temp[i] <= temp[j] + 1:
                     temp[i] = temp[j] + 1
-        
+
         max_length = 0
         for k in range(len(arr)):
             max_length = max(max_length, temp[k])
         return max_length
 
+
 if __name__ == "__main__":
     sol = Solution()
-    arr = [10,9,2,5,3,7,101,18]
+    arr = [10, 9, 2, 5, 3, 7, 101, 18]
     op = sol.length_of_LIS(arr)
     print("The length of the longest increasing subsequence is:", op)

@@ -57,7 +57,10 @@ class Solution:
 
             elif c > cost:
                 change = c - cost
-                hmap = {k: v for k, v in sorted(hmap.items(), key=lambda x: x[0], reverse=True)}
+                hmap = {
+                    k: v
+                    for k, v in sorted(hmap.items(), key=lambda x: x[0], reverse=True)
+                }
 
                 for k, v in hmap.items():
                     if change and v > 0:
@@ -74,5 +77,5 @@ class Solution:
         return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
