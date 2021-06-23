@@ -29,6 +29,8 @@ Constraints:
 1 <= nums[i] <= 100
 """
 
+from typing import List
+
 
 class Solution:
     def sumOfUnique(self, nums: List[int]) -> int:

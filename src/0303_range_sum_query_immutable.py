@@ -34,6 +34,8 @@ Constraints:
 
 """
 
+from typing import List
+
 
 class NumArray:
     def __init__(self, nums: List[int]):

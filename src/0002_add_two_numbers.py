@@ -6,7 +6,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 
 class ListNode:
-    def __init__(self):
+    def __init__(self, x):
         self.val = x
         self.next = None
 

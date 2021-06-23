@@ -31,6 +31,8 @@ Constraints:
 1 <= prices[i] <= 10^3
 """
 
+from typing import List
+
 
 class Solution:
     def finalPrices(self, prices: List[int]) -> List[int]:

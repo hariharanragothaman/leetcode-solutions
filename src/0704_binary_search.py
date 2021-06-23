@@ -3,6 +3,8 @@ Given a sorted (in ascending order) integer array nums of n elements and a targe
 If target exists, then return its index, otherwise return -1.
 """
 
+from typing import List
+
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:

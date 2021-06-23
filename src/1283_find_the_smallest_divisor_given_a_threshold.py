@@ -1,3 +1,6 @@
+
+from typing import List
+
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         div_cand = list(range(1, max(nums) + 1))

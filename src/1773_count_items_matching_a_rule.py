@@ -30,6 +30,8 @@ ruleKey is equal to either "type", "color", or "name".
 All strings consist only of lowercase letters.
 """
 
+from typing import List
+
 
 def countMatches(self, items: List[List[str]], ruleKey: str, ruleValue: str) -> int:
     hmap = {"type": 0, "color": 1, "name": 2}

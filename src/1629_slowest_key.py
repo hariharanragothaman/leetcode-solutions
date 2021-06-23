@@ -9,6 +9,8 @@ Keypress for 'd' had a duration of 50 - 49 = 1 (pressed at time 49 right after t
 The longest of these was the keypress for 'b' and the second keypress for 'c', both with duration 20.
 'c' is lexicographically larger than 'b', so the answer is 'c'.
 """
+from typing import List
+from collections import defaultdict
 
 
 class Solution:
