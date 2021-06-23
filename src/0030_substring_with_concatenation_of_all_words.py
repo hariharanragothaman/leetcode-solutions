@@ -29,4 +29,4 @@ class Trie:
         ptr.end = word
 
 def find_substring(s, words):
-    
+    pass
