@@ -27,3 +27,27 @@ def longest_palindromic_substring(string):
                 result = string[i:j]
                 break
     return result
+
+
+def longest_palindromic_substring_bruteforce(string):
+    best = ''
+    for left in range(len(string)):
+        for right in range(left, len(string)):
+            substring = s[left:right+1]
+            if substring == substring[::-1] and len(substring) > len(best):
+                best = substring
+    return best
+
+# remember if there is more than one odd - the palindrome cannot be formed.
+# This solution is through DP O(n^2)
+
+
+
+def longest_palindromic_substring_expand_center(string):
+    pass
+
+
+if __name__ == '__main__':
+    s = ""
+    result = longest_palindromic_substring_expand_center(s)
+    print(result)
