@@ -1,12 +1,13 @@
 from collections import deque
 
+
 class Solution:
     def decodeString(self, s):
         s1, s2 = [], []
         s = [c for c in s]
         q = deque(s)
         alpha = [chr(c) for c in range(ord("a"), ord("z") + 1)]
-        open, close = ['['], [']']
+        open, close = ["["], ["]"]
         prev_digit = False
 
         while q:
@@ -34,9 +35,10 @@ class Solution:
                         tmp.append(char)
                 mul = s1.pop()
                 s2 += tmp * int(mul)
-        return ''.join(s2)
+        return "".join(s2)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     s = "3[a10[c]]"
     obj = Solution()
     ans = obj.decodeString(s)

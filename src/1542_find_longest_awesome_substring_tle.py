@@ -1,6 +1,7 @@
 from typing import *
 from collections import *
 
+
 class Solution:
     def longestAwesome(self, s: str) -> int:
         """
