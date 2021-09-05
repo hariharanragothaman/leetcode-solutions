@@ -10,10 +10,7 @@ class Solution:
         C = len(maze[0])
 
         def neighbours(r, c):
-            for rows, cols in ((r - 1, c),
-                               (r + 1, c),
-                               (r, c - 1),
-                               (r, c + 1)):
+            for rows, cols in ((r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1)):
                 if 0 <= rows < R and 0 <= cols < C:
                     yield rows, cols
 
@@ -32,7 +29,7 @@ class Solution:
 
         for i, rows in enumerate(maze):
             for j, cols in enumerate(rows):
-                if maze[i][j] == '.' and (i, j) != (si, sj):
+                if maze[i][j] == "." and (i, j) != (si, sj):
                     if i == 0 or i == R - 1:
                         exits.append((i, j))
                     elif j == 0 or j == C - 1:
@@ -51,14 +48,15 @@ class Solution:
 
             for nei in neighbours(x, y):
                 nx, ny = nei
-                if maze[nx][ny] == '.' and (nx, ny) not in visited:
+                if maze[nx][ny] == "." and (nx, ny) not in visited:
                     visited.add((nx, ny))
                     q.append((nx, ny, dist + 1))
         return -1
 
-if __name__ == '__main__':
-    maze = [[".","+"]]
-    entrance = [0,0]
+
+if __name__ == "__main__":
+    maze = [[".", "+"]]
+    entrance = [0, 0]
     s = Solution()
     res = s.nearestExit(maze, entrance)
     print("The result is:", res)

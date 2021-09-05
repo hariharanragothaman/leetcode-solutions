@@ -40,6 +40,7 @@ The basic fundae here is:
 
 from typing import List
 
+
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
         nums.sort()

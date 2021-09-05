@@ -9,12 +9,14 @@ in any order and without any intervening characters
 You can return the answer in any order.
 """
 
+
 class TrieNode:
     def __init__(self, end=None, children=None):
         self.end = end
         if children is None:
             children = {}
         self.children = children
+
 
 class Trie:
     def __init__(self):
@@ -27,6 +29,7 @@ class Trie:
                 ptr.children[ch] = TrieNode()
             ptr = ptr.children[ch]
         ptr.end = word
+
 
 def find_substring(s, words):
     pass

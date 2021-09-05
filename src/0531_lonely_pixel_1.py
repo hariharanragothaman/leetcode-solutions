@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def findLonelyPixel(self, picture: List[List[str]]) -> int:
         R = len(picture)
@@ -17,7 +18,7 @@ class Solution:
 
         for i in range(R):
             for j in range(C):
-                if picture[i][j] == 'B':
+                if picture[i][j] == "B":
                     candidates.append((i, j))
 
         # print(f"The candidates are: {candidates}")
@@ -38,7 +39,7 @@ class Solution:
 
         for i, j in candidates:
             # print(i, j, rows[i], cols[j])
-            if rows[i].count('B') == 1 and cols[j].count('B') == 1:
+            if rows[i].count("B") == 1 and cols[j].count("B") == 1:
                 cnt += 1
 
         return cnt

@@ -24,6 +24,7 @@ Output: 5.27778
 from typing import List
 from collections import deque
 
+
 class Solution:
     def trimMean(self, arr: List[int]) -> float:
         arr.sort()

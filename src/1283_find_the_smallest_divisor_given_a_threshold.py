@@ -1,6 +1,6 @@
-
 from typing import List
 import math
+
 
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
