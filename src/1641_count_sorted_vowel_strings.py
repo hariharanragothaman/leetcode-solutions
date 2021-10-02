@@ -10,4 +10,4 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    s.countVowelStrings(1)
+    s.countVowelStrings(2)
