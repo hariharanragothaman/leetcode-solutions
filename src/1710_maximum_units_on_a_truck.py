@@ -6,7 +6,7 @@ class Solution:
         total = 0
         curr_boxes = 0
         for box_count, units in boxTypes:
-            if curr_boxes + box_count < truckSize:
+            if curr_boxes + box_count <= truckSize:
                 total += box_count * units
                 curr_boxes += box_count
             else:
